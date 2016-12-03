@@ -1,4 +1,7 @@
 # Brenton Horne's script 20161204
+clear all
+
+# constants
 N         = 1000;
 NN        = 100000;
 n         = 0:N;
