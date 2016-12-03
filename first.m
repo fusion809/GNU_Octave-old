@@ -31,7 +31,7 @@ E2        = D2(2:N,2:N);
 # H is the matrix version of the Sturm-Liouville operator.
 H         = - 4/((b-a)^2)*E2 + k*diag(ysub);
 [Y, LAM]  = eig(H);
-# Convert LAM (diagonal matrix) to vertical vector. 
+# Convert LAM (diagonal matrix) to vertical vector.
 Lam       = diag(LAM);
 [Lam, IX] = sort(Lam, 'ascend');
 Y         = Y(:,IX);
@@ -51,4 +51,4 @@ rms       = sqrt(sum(err(1:M).^2)/(M));
 figure(1);
 plot(nsub,log10(err),"linewidth",2)
 figure(2);
-plot(yy,YY(:,2),'-r',"linewidth",2,yy,YY(:,10),'-g',"linewidth",2,yy,YY(:,50),'-b',"linewidth",2,yy,YY(:,150),'-m',"linewidth",2)
+plot(yy,YY(:,1),'-r',"linewidth",2,yy,YY(:,75),'-g',"linewidth",2,yy,YY(:,150),'-b',"linewidth",2,yy,YY(:,300),'-m',"linewidth",2)
