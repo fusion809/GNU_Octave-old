@@ -9,7 +9,7 @@ NN        = 100000;
 ## [a,b] is the problem interval
 a         = 0;
 b         = 200;
-## - d2Y/dx2 + kxY = lambda Y is the problem
+## - d2Y/dx2 + kxY = lambda Y is the problem; this is that k
 k         = 1;
 ## How far we are computing the root-mean square error up to
 M         = round(N/3);
