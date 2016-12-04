@@ -43,15 +43,24 @@ Y         = Y(:,IX);
 Y         = [zeros(1,N-1); Y; zeros(1,N-1)];
 
 # Interpolate
-a         = T\Y;
-YY        = TT*a;
+aa        = T\Y;
+YY        = TT*aa;
 
 # Error analysis
+# the exact solution calls for the eigenvalues to negative the zeros of the Airy Ai function
 err       = airy(0,-Lam);
 rms       = sqrt(sum(err(1:M).^2)/(M));
 
 # Plotting
 figure(1);
 plot(nsub,log10(err),"linewidth",2)
+title("Log10 of Airy Ai of - the eigenvalues; lower (more negative) the better the solution")
 figure(2);
-plot(yy,YY(:,1),'-r',"linewidth",2,yy,YY(:,75),'-g',"linewidth",2,yy,YY(:,150),'-b',"linewidth",2,yy,YY(:,300),'-m',"linewidth",2)
+plot(yy,YY(:,1),'-r',"linewidth",2)
+title("Plot of the first eigenfunction on [0,200]")
+figure(3);
+plot(yy,YY(:,150),'-g',"linewidth",2)
+title("Plot of the 150th eigenfunction on [0,200]")
+figure(4);
+plot(yy,YY(:,300),'-m',"linewidth",2)
+title("Plot of the 300th eigenfunction on [0,200]")
