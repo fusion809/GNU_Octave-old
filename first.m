@@ -95,7 +95,10 @@ err       = airy(0,-Lam);
 ## root-mean square error for err vector up to element M
 rms       = sqrt(sum(err(1:M).^2)/(M));
 
-# Plotting
+###################################################################################################
+# Plotting                                                                                        #
+###################################################################################################
+
 ## Plot the log of err
 figure(1);
 plot(nsub,log10(err),"linewidth",2)
