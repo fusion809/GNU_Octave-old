@@ -88,6 +88,8 @@ aa        = T\Y;
 
 ## Interpolate to linear grid
 YY        = TT*aa;
+## Amplitude
+Amp       = YY.^2;
 
 # Error analysis
 ## the exact solution calls for the eigenvalues to negative the zeros of the Airy Ai function
@@ -115,3 +117,7 @@ title("Plot of the 150th eigenfunction on [0,200]")
 figure(4);
 plot(yy,YY(:,300),'-m',"linewidth",2)
 title("Plot of the 300th eigenfunction on [0,200]")
+## plot the 300th amplitude
+figure(5)
+plot(yy,Amp(:,300),'-k',"linewidth",2)
+title("Plot of the 300th amplitude on [0,200]")
