@@ -12,4 +12,4 @@ This repository contains my GNU Octave scripts.
 | RandomExample2.m | Solves d2y/dx2 = (C^2)/(y^2) - lambda^2 * (y(1))^(n-1) over [0,10] with y(0)=1; dy/dx(0) = 1 |
 | simpen-ex.m      | Solves the problem of the simple pendulum.                                   |
 | simpen.m         | Differential function for the simple pendulum.                               |
-| SLEq.m           | Solves Sturm-Liouville problem with linear potential.                        |
+| SLEq.m           | Solves 1D Schrodinger equation with linear potential.                        |
