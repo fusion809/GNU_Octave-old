@@ -1,3 +1,5 @@
+% Solves the time-independent Schrodinger equation for
+% Potential energy V(x) = x
 clear all
 format long g
 N=2000;
@@ -15,7 +17,7 @@ E1=D1(2:N,2:N);
 E2=D2(2:N,2:N);
 d1=2/(b-a)*E1;
 d2=4/(b-a)^2*E2;
-H=d2-diag(ysub);
+H=-d2+diag(ysub);
 [Psisub, LAM]=eig(H);
 Lam=diag(LAM);
 [lam IX]=sort(Lam, 'ascend');
